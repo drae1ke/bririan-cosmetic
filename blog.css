@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffcccb;
+    color: #f9f9f9;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  nav li{
+    list-style-type: none;
+  }
+  nav li:hover{
+    padding: 5px;
+  }
+  nav li a{
+    text-decoration: none;
+    color: white;
+  
+  }
+  
+  .cta-button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #ff3b2f;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background: url('../images/banner-1.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    animation: fadeIn 5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Blog Section */
+  .blog {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .blog-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .blog-card {
+    width: 30%;
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .blog-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .blog-card h3 {
+    margin: 15px 0;
+  }
+  
+  .blog-card a {
+    text-decoration: none;
+    color: #ff6f61;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
